@@ -1,0 +1,37 @@
+body {
+    background-color: #760C10;
+}
+
+p,h1,h2,li {
+    color: #D7BB2B;
+    font-family: "Arial Black";
+}
+
+a {
+    color: #8a7402;
+}
+
+div.header {
+    padding: 5%;
+}
+
+div.header-image {
+    position: relative;
+    top: 0px;
+    float: left;
+    overflow: hidden;
+}
+
+div.header-text {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+footer {
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    font-size: 65%;
+    width: 75%;
+}
