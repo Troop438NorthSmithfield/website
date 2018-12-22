@@ -1,2 +1,0 @@
-put index.*
-put -r images
