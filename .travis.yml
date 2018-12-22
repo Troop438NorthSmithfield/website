@@ -7,4 +7,4 @@ before_install:
   # set up awscli packages
   - pip install --user awscli
 
-script: aws --profile travis-ci s3 sync ./site s3://$S3_BUCKET/ --delete --acl private --cache-control "max-age=2592000"
+script: aws s3 sync ./site s3://$S3_BUCKET/ --delete --acl private --cache-control "max-age=2592000"
