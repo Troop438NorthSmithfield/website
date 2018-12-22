@@ -1,13 +1,8 @@
 language: python
 
-env:
-  global:
-    # include $HOME/.local/bin for `aws`
-    - PATH=$HOME/.local/bin:$PATH
-
 before_install:
   # set up awscli packages
-  - pip install --user awscli
+  - pip install awscli
 
 script:
   - ls -lAF
