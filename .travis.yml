@@ -3,6 +3,10 @@ env:
     # include $HOME/.local/bin for `aws`
     - PATH=$HOME/.local/bin:$PATH
 
+branches:
+  only:
+  - master
+
 before_install:
   # set up awscli packages
   - pip install --user awscli
