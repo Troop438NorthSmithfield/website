@@ -1,37 +1,45 @@
-body {
-    background-color: #760C10;
+.bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-p,h1,h2,li {
-    color: #D7BB2B;
-    font-family: "Arial Black";
+.title {
+    font-family: 'Rubik', sans-serif;
 }
 
-a {
-    color: #8a7402;
+.has-text-maroon {
+    color: maroon;
 }
 
-div.header {
-    padding: 5%;
+.is-maroon {
+    background-color: maroon;
 }
 
-div.header-image {
-    position: relative;
-    top: 0px;
-    float: left;
-    overflow: hidden;
+.has-text-gold {
+    color: gold;
 }
 
-div.header-text {
-    position: relative;
-    text-align: center;
-    overflow: hidden;
+a.has-text-gold:hover {
+    color: lightpink;
 }
 
-footer {
-    padding: 10px;
-    margin: auto;
-    text-align: center;
-    font-size: 65%;
-    width: 75%;
+.is-gold {
+    background-color: gold;
+}
+
+.bottom-line {
+    border-bottom: 2px solid gold;
+}
+
+.bg-hiking {
+    background-image: url('images/bg-hiking.jpg');
+}
+
+.bg-canoing {
+    background-image: url('images/bg-canoing.jpg');
+}
+
+.bg-campfire {
+    background-image: url('images/bg-campfire.jpg');
 }
