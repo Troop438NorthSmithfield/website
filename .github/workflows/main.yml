@@ -34,5 +34,5 @@ jobs:
 
       - name: Copy files to the test website with the AWS CLI
         run: |
-          aws s3 sync site/. s3://dev.troop438.com
+          aws s3 sync --delete site/. s3://dev.troop438.com
 
