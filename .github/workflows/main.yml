@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Production
 
 # Controls when the workflow will run
 on:
@@ -32,4 +32,4 @@ jobs:
 
       - name: Copy files to the test website with the AWS CLI
         run: |
-          aws s3 sync --delete site/. s3://troop438.com
+          aws s3 sync --delete --acl private --cache-control "max-age=2592000" site/. s3://troop438.com
