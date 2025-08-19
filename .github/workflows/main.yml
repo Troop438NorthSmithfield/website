@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Production
+name: troop438.com
 
 # Controls when the workflow will run
 on:
@@ -30,7 +30,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Copy files to the test website with the AWS CLI
+      - name: Copy files to the production website (troop438.com) with the AWS CLI
         run: |
           aws s3 sync --delete --acl private --cache-control "max-age=2592000" site/. s3://troop438.com
 

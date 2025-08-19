@@ -1,10 +1,10 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: dev.troop438.com
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
+  # Triggers the workflow on push or pull request events but only for the develop branch
   push:
     branches: [ develop ]
   pull_request:
@@ -32,9 +32,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Copy files to the test website with the AWS CLI
+      - name: Copy files to the pre-production website (dev.troop438.com) with the AWS CLI
         run: |
-          aws s3 sync --delete site/. s3://dev.troop438.com
+          aws s3 sync --delete --acl private --cache-control "max-age=2592000" site/. s3://dev.troop438.com
 
       - name: Create a CloudFront invalidation to force re-cache of all files.
         run: |
