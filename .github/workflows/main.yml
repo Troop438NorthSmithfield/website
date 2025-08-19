@@ -33,3 +33,7 @@ jobs:
       - name: Copy files to the test website with the AWS CLI
         run: |
           aws s3 sync --delete --acl private --cache-control "max-age=2592000" site/. s3://troop438.com
+
+      - name: Create a CloudFront invalidation to force re-cache of all files.
+        run: |
+          aws cloudfront create-invalidation --distribution-id E2HGT12T4HVCAT --paths /*
