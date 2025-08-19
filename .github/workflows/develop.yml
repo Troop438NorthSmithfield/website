@@ -35,3 +35,7 @@ jobs:
       - name: Copy files to the test website with the AWS CLI
         run: |
           aws s3 sync --delete site/. s3://dev.troop438.com
+
+      - name: Create a CloudFront invalidation to force re-cache of all files.
+        run: |
+          aws cloudfront create-invalidation --distribution-id E3E65Y6T83TOMY --paths '/*'
