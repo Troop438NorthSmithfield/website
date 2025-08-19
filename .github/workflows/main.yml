@@ -36,4 +36,4 @@ jobs:
 
       - name: Create a CloudFront invalidation to force re-cache of all files.
         run: |
-          aws cloudfront create-invalidation --distribution-id E2HGT12T4HVCAT --paths /*
+          aws cloudfront create-invalidation --distribution-id E2HGT12T4HVCAT --paths '/*'
